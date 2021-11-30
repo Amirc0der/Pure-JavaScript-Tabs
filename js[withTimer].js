@@ -7,6 +7,10 @@ item.classList.add("show")
 list.classList.add("active")
 let timeout = 0;
 
+if (lists.length != items.length) {
+	alert("The number of tabs does not match the number of pages.")
+}
+
 for ( i = lists.length -1 ; ~i!=0 ; i-- ) {
 	lists[i].setAttribute("onclick", "makemeshow(" + i + ")")
 }
