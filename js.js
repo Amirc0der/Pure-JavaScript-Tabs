@@ -6,6 +6,10 @@ const lists = tabs.querySelectorAll(".tabheaditem")
 item.classList.add("show")
 list.classList.add("active")
 
+if (lists.length != items.length) {
+	alert("The number of tabs does not match the number of pages.")
+}
+
 for ( i = lists.length -1 ; ~i!=0 ; i-- ) {
 	lists[i].setAttribute("onclick", "makemeshow(" + i + ")")
 }
